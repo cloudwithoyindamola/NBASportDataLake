@@ -20,9 +20,9 @@ The setup_sport_data_lake.py script simplifies the setup of a data lake by perfo
 Before running the script, ensure you have the following:
 - NBA API Access: Obtain a free account and API key from [sportsdata.io](https://sportsdata.io/)
 - IAM Role/Permissions: Ensure the user or role running the script has the following permissions:
- - S3: s3:CreateBucket, s3:PutObject, s3:DeleteBucket, s3:ListBucket
- - Glue: glue:CreateDatabase, glue:CreateTable, glue:DeleteDatabase, glue:DeleteTable
- - Athena: athena:StartQueryExecution, athena:GetQueryResults
+   - S3: s3:CreateBucket, s3:PutObject, s3:DeleteBucket, s3:ListBucket
+   - Glue: glue:CreateDatabase, glue:CreateTable, glue:DeleteDatabase, glue:DeleteTable
+   - Athena: athena:StartQueryExecution, athena:GetQueryResults
 
 ## **Project Structure**
 ```bash
@@ -83,7 +83,7 @@ NBA_ENDPOINT=https://api.sportsdata.io/v3/nba/scores/json/Players
 ```bash
 python3 setup_sport_data_lake.py
 ```
--You should see the resources were successfully created, the sample data was uploaded successfully and the Data Lake Setup Completed
+You should see the resources were successfully created, the sample data was uploaded successfully and the Data Lake Setup Completed
 
 # Step 5: Manually Check For The Resources
 1. In the Search Bar, type S3 and click blue hyper link name
@@ -95,8 +95,7 @@ python3 setup_sport_data_lake.py
 2. Click on raw-data and you will see it contains "nba_player_data.json"
 
 3. Click the file name and at the top you will see the option to Open or Download  the file
-
--You'll see a long string of various NBA data
+You'll see a long string of various NBA data
 
 
 4. Head over to Amazon Athena and you could paste the following sample query:
@@ -106,8 +105,8 @@ FROM nba_players
 WHERE Position = 'PG';
 ```
 
--Click Run
--You should see an output if you scroll down under "Query Results"
+- Click Run
+You should see an output if you scroll down under "Query Results"
 
 # Optional AWS Resource Deletion Script
 To delete some AWS resources and manage cost,Run the `delete_aws_resources` file
