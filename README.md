@@ -35,6 +35,9 @@ Before running the script, ensure you have the following:
 ├── delete_aws_resources              # Script or directory for removing AWS resources
 └── README.md                         # Documentation for the project
 ```
+## **Project Architecture**
+Data-lake-Architecture.png
+![Data Architecture](Data-lake-Architecture.png)
 
 # START HERE 
 # Step 1: Open CloudShell Console
